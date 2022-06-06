@@ -9,7 +9,7 @@ const config = {
   title: 'Estudos',
   tagline: 'Site de Documentações e Estudos',
   url: 'https://howto.educardoso.com.br',
-  baseUrl: '/docs/intro',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -71,7 +71,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/EduardoVieiraCardoso/howto',
             label: 'GitHub',
             position: 'right',
           },
@@ -100,10 +100,6 @@ const config = {
                 label: 'Discord',
                 href: 'https://discordapp.com/invite/docusaurus',
               },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
             ],
           },
           {
@@ -115,7 +111,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/EduardoVieiraCardoso/howto',
               },
             ],
           },
