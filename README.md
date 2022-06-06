@@ -1,41 +1,17 @@
 # Website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+- Este site foi construido usando o [Docusaurus 2](https://docusaurus.io/). 
+- O objetivo deste site é estudo e documentações de boas praticas de diversos assuntos;
 
-### Installation
+## Assuntos Tratados
 
-```
-$ yarn
-```
+- Sistemas Operacionais;
+- Redes de computadores;
 
-### Local Development
+## Hospedagem
 
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
+Este site está hospedado na cloudflare pages, com restrição de acesso. a pagina.
 
 ```
-$ yarn build
+by: Eduardo Vieira Cardos
 ```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
