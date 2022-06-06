@@ -9,7 +9,7 @@ const config = {
   title: 'Estudos',
   tagline: 'Site de Documentações e Estudos',
   url: 'https://howto.educardoso.com.br',
-  baseUrl: '/',
+  baseUrl: '/docs',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -85,15 +85,6 @@ const config = {
             items: [
               {
                 label: 'Docs',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Anotações',
-            items: [
-              {
-                label: 'Notes',
                 to: '/docs/intro',
               },
             ],
