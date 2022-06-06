@@ -84,7 +84,16 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Docs',
+                to: '/docs/intro',
+              },
+            ],
+          },
+          {
+            title: 'Anotações',
+            items: [
+              {
+                label: 'Notes',
                 to: '/docs/intro',
               },
             ],
