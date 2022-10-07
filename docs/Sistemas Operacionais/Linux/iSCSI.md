@@ -58,10 +58,4 @@ Após adicionar os targets, é necessario ativar as conexões.
 
 O comando, irá abrir uma sessão com cada target, de forma que caso um dê problema, o outro continue em operação sem maiores problemas.
 
-## Adicionando host a storage
-
-Para adicionar um host é necessario ir em **home/storage/hosts**, na opção create, usa-se a opção **host**.
-
-<img src="../../../Imagens/manuais-de2000_createhost.png"/>
-
 As opções são auto explicativas, basta selecionar a correspondente ao desejado.
