@@ -1,6 +1,6 @@
 ---
 slug: multipath-linux-iscsi
-title: Como Coletar Modelo de controladora no Linux
+title: iSCSI
 authors: Eduardo
 tags: [Linux, iSCSI, multipath]
 ---
