@@ -65,7 +65,7 @@ Como haverá multiplos caminhos para chegar até o disco na storage, é necessar
 
 Com o pacote do multipath instalado, primeiramente, deve-se executar o comando **multipath -ll**, ele exibirá todos os discos mapeados e quais caminhos tem para chegar até ele.
 
-{
+```
  root@psa:/etc/iscsi# multipath -ll
  mpatha (36d039ea0001cf998000002535ffbd0d6) dm-1 LENOVO,DE_Series
  size=80G features='3 queue_if_no_path pg_init_retries 50' hwhandler='1 alua' wp=rw
@@ -73,7 +73,7 @@ Com o pacote do multipath instalado, primeiramente, deve-se executar o comando *
  | `- 16:0:0:1 sdc 8:32 active ready running
  `-+- policy='service-time 0' prio=10 status=enabled
    `- 17:0:0:1 sdd 8:48 active ready running
-}
+```
 
 Com o multipath, é possivel ajustar como o dado chega até a storage, ativo-ativo, ativo-standby... e por ai vai.
 
