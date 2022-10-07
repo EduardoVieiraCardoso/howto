@@ -33,9 +33,11 @@ Para adicionar os targets basta executar o seguinte comando:
 
 O resultado do comando deverá ser semelhante a:
 
+{
 root@psa:/etc/iscsi# iscsiadm -m discovery -t sendtargets -p 192.168.131.101:3260
 192.168.131.101:3260,2 iqn.2002-09.com.lenovo:thinksystem.6d039ea0001cf998000000005ff8e47f
 192.168.130.101:3260,1 iqn.2002-09.com.lenovo:thinksystem.6d039ea0001cf998000000005ff8e47f
+}
 
 Neste caso, existem dois targets para a mesma storage, e o comando trouxe a lista e já incluiu no seu banco de dados.
 
@@ -45,7 +47,7 @@ O procedimento acima deve ser executado para cada ip iSCSI da storage.
 
 Após adicionar os targets, é necessario ativar as conexões.
 
-> $#iscsiadm -m node --login
+> root@psa#iscsiadm -m node --login
 
 O comando, irá abrir uma sessão com cada target, de forma que caso um dê problema, o outro continue em operação sem maiores problemas.
 
@@ -63,13 +65,15 @@ Como haverá multiplos caminhos para chegar até o disco na storage, é necessar
 
 Com o pacote do multipath instalado, primeiramente, deve-se executar o comando **multipath -ll**, ele exibirá todos os discos mapeados e quais caminhos tem para chegar até ele.
 
-> root@psa:/etc/iscsi# multipath -ll
-> mpatha (36d039ea0001cf998000002535ffbd0d6) dm-1 LENOVO,DE_Series
-> size=80G features='3 queue_if_no_path pg_init_retries 50' hwhandler='1 alua' wp=rw
-> |-+- policy='service-time 0' prio=50 status=active
-> | `- 16:0:0:1 sdc 8:32 active ready running
-> `-+- policy='service-time 0' prio=10 status=enabled
->   `- 17:0:0:1 sdd 8:48 active ready running
+{
+ root@psa:/etc/iscsi# multipath -ll
+ mpatha (36d039ea0001cf998000002535ffbd0d6) dm-1 LENOVO,DE_Series
+ size=80G features='3 queue_if_no_path pg_init_retries 50' hwhandler='1 alua' wp=rw
+ |-+- policy='service-time 0' prio=50 status=active
+ | `- 16:0:0:1 sdc 8:32 active ready running
+ `-+- policy='service-time 0' prio=10 status=enabled
+   `- 17:0:0:1 sdd 8:48 active ready running
+}
 
 Com o multipath, é possivel ajustar como o dado chega até a storage, ativo-ativo, ativo-standby... e por ai vai.
 
@@ -93,35 +97,35 @@ No comando **multipath -ll** o wwid do disco será exibido, neste caso é o **36
 
 Para configurar o alias deve-se adicionar as seguintes linhas dentro do **/etc/multipath.conf**:
 
-> multipaths {
-> 	multipath {
->     	wwid                  36d039ea0001cf998000002535ffbd0d6
->         alias   				volume_Edu_Teste
-> 	}
-> }
+ multipaths {
+ 	multipath {
+     	wwid                  36d039ea0001cf998000002535ffbd0d6
+         alias   				volume_Edu_Teste
+ 	}
+ }
 
 Para cada novo volume mapeado, deve-se configurar uma nova chave de multipath, como no exemplo abaixo:
 
-> multipaths {
-> 	multipath {
-> 		wwid                  36d039ea0001cf998000002535ffbd0d6
-> 		alias                 volume_Edu_Teste
-> 	}
-> 	multipath {
-> 		wwid                  36d039ea0001cf998000002535ffbd0d7
-> 		alias                 Banco_de_dados
-> 	}
-> 	multipath {
-> 		wwid                  36d039ea0001cf998000002535ffbd0d8
-> 		alias                 Backup 
-> 	}
-> }
+ multipaths {
+ 	multipath {
+ 		wwid                  36d039ea0001cf998000002535ffbd0d6
+ 		alias                 volume_Edu_Teste
+ 	}
+	multipath {
+ 		wwid                  36d039ea0001cf998000002535ffbd0d7
+ 		alias                 Banco_de_dados
+ 	}
+ 	multipath {
+ 		wwid                  36d039ea0001cf998000002535ffbd0d8
+ 		alias                 Backup 
+ 	}
+ }
 
 Após realizar as configurações é necessario reconfigurar o multipath:
 
->root@psa#multipathd -k
-multipathd> reconfigure
-multipathd> exit
-root@psa#multipath -ll
+root@psa# multipathd -k
+root@psa# multipathd> reconfigure
+root@psa# multipathd> exit
+root@psa# multipath -ll
 
 Feito este procedimento, o nome do dispositivo, já deve ter sido alterado.
