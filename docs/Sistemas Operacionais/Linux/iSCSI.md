@@ -1,3 +1,10 @@
+---
+slug: multipath-linux-iscsi
+title: Como Coletar Modelo de controladora no Linux
+authors: Eduardo
+tags: [Linux, iSCSI, multipath]
+---
+
 No linux é necessario que estes dois pacotes estejam instalados:
 
 - open-iscsi
@@ -134,10 +141,3 @@ root@psa# multipathd> exit
 root@psa# multipath -ll
 ```
 Feito este procedimento, o nome do dispositivo, já deve ter sido alterado.
-
----
-slug: multipath-linux-iscsi
-title: Como Coletar Modelo de controladora no Linux
-authors: Eduardo
-tags: [Linux, iSCSI, multipath]
----
