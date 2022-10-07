@@ -33,11 +33,11 @@ Para adicionar os targets basta executar o seguinte comando:
 
 O resultado do comando deverá ser semelhante a:
 
-{
+```
 root@psa:/etc/iscsi# iscsiadm -m discovery -t sendtargets -p 192.168.131.101:3260
 192.168.131.101:3260,2 iqn.2002-09.com.lenovo:thinksystem.6d039ea0001cf998000000005ff8e47f
 192.168.130.101:3260,1 iqn.2002-09.com.lenovo:thinksystem.6d039ea0001cf998000000005ff8e47f
-}
+```
 
 Neste caso, existem dois targets para a mesma storage, e o comando trouxe a lista e já incluiu no seu banco de dados.
 
@@ -79,6 +79,7 @@ Com o multipath, é possivel ajustar como o dado chega até a storage, ativo-ati
 
 Neste caso, não encontrei nenhuma recomendação da LENOVO para sistemas operacionais como ubuntu, o que se entende que deve-se utilizar nas opções padrões do multipath que já vem pré-configurado.
 
+```
         device {
                 vendor "LENOVO"
                 product "DE_Series"
@@ -91,21 +92,23 @@ Neste caso, não encontrei nenhuma recomendação da LENOVO para sistemas operac
                 failback "immediate"
                 no_path_retry 30
         }
+```
+
 - Configurando os alias do multipath
 
 No comando **multipath -ll** o wwid do disco será exibido, neste caso é o **36d039ea0001cf998000002535ffbd0d6**. Com o multipath, é possivel dar um nome a ele, por boa pratica, recomenda-se utilizar o mesmo nome dado ao volume na storage.
 
 Para configurar o alias deve-se adicionar as seguintes linhas dentro do **/etc/multipath.conf**:
-
+```
  multipaths {
  	multipath {
      	wwid                  36d039ea0001cf998000002535ffbd0d6
          alias   				volume_Edu_Teste
  	}
  }
-
+```
 Para cada novo volume mapeado, deve-se configurar uma nova chave de multipath, como no exemplo abaixo:
-
+```
  multipaths {
  	multipath {
  		wwid                  36d039ea0001cf998000002535ffbd0d6
@@ -120,12 +123,14 @@ Para cada novo volume mapeado, deve-se configurar uma nova chave de multipath, c
  		alias                 Backup 
  	}
  }
+```
 
 Após realizar as configurações é necessario reconfigurar o multipath:
 
+```
 root@psa# multipathd -k
 root@psa# multipathd> reconfigure
 root@psa# multipathd> exit
 root@psa# multipath -ll
-
+```
 Feito este procedimento, o nome do dispositivo, já deve ter sido alterado.
