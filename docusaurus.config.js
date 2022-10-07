@@ -67,9 +67,10 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'lalalal',
+            label: 'Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/tutorial', label: 'Tutorial', position: 'left'},
           {
             href: 'https://github.com/EduardoVieiraCardoso/howto',
             label: 'GitHub',
@@ -81,20 +82,11 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Documentos',
+            title: 'Redes Sociais',
             items: [
               {
-                label: 'Docs',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Linkedin',
+                href: 'https://www.linkedin.com/in/eduardovieirac',
               },
               {
                 label: 'Discord',
@@ -108,10 +100,6 @@ const config = {
               {
                 label: 'Blog',
                 to: '/blog',
-              },
-              {
-                label: 'Wiki',
-                to: '/wiki',
               },
               {
                 label: 'GitHub',
