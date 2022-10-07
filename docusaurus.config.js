@@ -67,12 +67,6 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
-          },
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
             label: 'lalalal',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
@@ -114,6 +108,10 @@ const config = {
               {
                 label: 'Blog',
                 to: '/blog',
+              },
+              {
+                label: 'Wiki',
+                to: '/wiki',
               },
               {
                 label: 'GitHub',
