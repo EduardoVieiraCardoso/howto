@@ -1,8 +1,8 @@
 ---
 slug: linux-iscsi
-title: Multipath
+title: iSCSI
 authors: Eduardo
-tags: [Linux, ubuntu, multipath]
+tags: [Linux, iSCSI]
 ---
 # Configurando o Multipath
 
