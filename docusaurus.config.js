@@ -1,4 +1,3 @@
-
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -10,7 +9,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/educardoso-favicon.ico',
 
   organizationName: 'Edu Cardoso', // Usually your GitHub org/user name.
   projectName: 'Base de Conhecimento', // Usually your repo name.
@@ -60,15 +59,27 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'Network/index',
+            docId: 'Redes/index',
             position: 'left',
-            label: 'Network',
+            label: 'Redes',
           },
           {
             type: 'doc',
-            docId: 'Security/index',
+            docId: 'Segurança/index',
             position: 'left',
-            label: 'Security',
+            label: 'Segurança',
+          },
+          {
+            type: 'doc',
+            docId: 'Armazenamento/index',
+            position: 'left',
+            label: 'Armazenamento',
+          },
+          {
+            type: 'doc',
+            docId: 'Virtualização/index',
+            position: 'left',
+            label: 'Virtualização',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -91,33 +102,21 @@ const config = {
             ],
           },
           {
-            title: 'Onde me encontrar',
+            title: 'Onde estou',
             items: [
               {
                 label: 'Discord',
                 href: 'https://discordapp.com/invite/docusaurus',
+                position: 'left',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'linkedin',
+                href: 'https://www.linkedin.com/in/eduardovieirac',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()}`,
       },
       prism: {
         theme: lightCodeTheme,
