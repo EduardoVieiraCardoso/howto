@@ -3,6 +3,7 @@ slug: linux-iscsi
 title: iSCSI
 authors: Eduardo
 tags: [Linux, iSCSI]
+displayed_sidebar: sistema_operacional
 ---
 
 No linux é necessario que estes dois pacotes estejam instalados:

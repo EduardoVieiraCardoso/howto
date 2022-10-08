@@ -1,8 +1,9 @@
 ---
-slug: linux-iscsi
+slug: linux-multipath
 title: Multipath
 authors: Eduardo
 tags: [Linux, ubuntu, multipath]
+displayed_sidebar: sistema_operacional
 ---
 # Configurando o Multipath
 
