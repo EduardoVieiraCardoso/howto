@@ -10,26 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Linux',
+    title: 'Operation Systems',
     Svg: require('@site/static/img/linux-svgrepo-com.svg').default,
     description: (
       <>
+      Exemplos práticos que ajudarão você a entender ainda melhor os comandos do Linux.
       </>
     ),
   },
   {
-    title: 'Redes de Computadores',
+    title: 'Network',
     Svg: require('@site/static/img/network-svgrepo-com.svg').default,
     description: (
       <>
+      Resumos sobre protocolos de redes, boas práticas e exemplos de uso.
       </>
     ),
   },
   {
-    title: 'Armazenamento',
+    title: 'Storage',
     Svg: require('@site/static/img/hard-disc-memory-svgrepo-com.svg').default,
     description: (
       <>
+      Abordagem sobre sistemas de armazenamento, equipamentos e boas práticas.
       </>
     ),
   },

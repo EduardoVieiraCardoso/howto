@@ -3,8 +3,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Eduardo Vieira Cardoso',
-  tagline: 'Base de Conhecimentos ',
+  title: 'Handbooks de infraestrutura',
+  tagline: '“Nada é tão bom que não possa ser melhorado, qualquer um de nós está sempre em aprendizado. Quando achamos que já sabemos tudo, é o sinal de que nem começamos a aprender o básico, HUMILDADE”',
   url: 'https://howto.educardoso.com.br',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -83,8 +83,9 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            type: 'doc',
+            docId: 'quemsou',
+            label: 'About me',
             position: 'right',
           },
         ],
