@@ -1,10 +1,11 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Handbooks de infraestrutura',
-  tagline: '“Nada é tão bom que não possa ser melhorado, qualquer um de nós está sempre em aprendizado. Quando achamos que já sabemos tudo, é o sinal de que nem começamos a aprender o básico, HUMILDADE”',
+  tagline: '“Nada é tão bom que não possa ser melhorado, qualquer um de nós está sempre em aprendizado. Quando achamos que já sabemos tudo, é o sinal de que nem começamos a aprender o básico, humildade!”',
   url: 'https://howto.educardoso.com.br',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -103,7 +104,7 @@ const config = {
             ],
           },
           {
-            title: 'Onde estou',
+            title: 'Comunidades',
             items: [
               {
                 label: 'Discord',

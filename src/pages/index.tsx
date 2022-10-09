@@ -14,7 +14,7 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        Gilmar de Freitas Vasconcelos
+        por Gilmar de Freitas Vasconcelos
       </div>
     </header>
   );
