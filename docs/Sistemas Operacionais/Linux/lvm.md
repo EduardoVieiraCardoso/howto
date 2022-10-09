@@ -117,7 +117,7 @@ Como o SDA já está formato e modo padrão ( **83** Linux), não recomento a al
 
 Em cada disco irei criar uma única partição que irá ocupar todo o disco disponível.
 
-O comando que irei utilizar para criar a as partições é **fdisk /dev/sd\*** (no seu sistema troque o \* pelo disco que você irá utilizar.)
+O comando que irei utilizar para criar a as partições é **fdisk /dev/sd\* ** (no seu sistema troque o \* pelo disco que você irá utilizar.)
 
 
 
@@ -183,10 +183,10 @@ Note que utilizei o diretório /dev/mapper, o LVM irá utilizar este diretório 
 
 Para finalizar então, irei inserir duas linhas e configuração no fstab
 
-echo "/dev/mapper/grupo--disco-disco--bkp /home/bkp auto 2 2 " \>\> /etc/fstab
-
-echo "/dev/mapper/grupo--disco-disco--var /var/log auto 2 2 " \>\> /etc/fstab
-
+```
+echo "/dev/mapper/grupo--disco-disco--bkp /home/bkp auto 2 2 " >> /etc/fstab
+echo "/dev/mapper/grupo--disco-disco--var /var/log auto 2 2 " >> /etc/fstab
+```
 e por ultimo um **mount -av** para montar todas as partições do fstab
 
 8
