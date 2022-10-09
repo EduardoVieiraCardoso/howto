@@ -1,5 +1,5 @@
 ---
-displayed_sidebar: Seguranca
+displayed_sidebar: Armazenamento
 ---
 
-Teste Seguranca
+ Teste storage

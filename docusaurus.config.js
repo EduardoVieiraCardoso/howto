@@ -46,7 +46,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Docs',
+        title: 'EduCardoso',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -81,6 +81,12 @@ const config = {
             docId: 'Virtualização/index',
             position: 'left',
             label: 'Virtualização',
+          },
+          {
+            type: 'doc',
+            docId: 'eve-ng',
+            position: 'left',
+            label: 'eve-ng',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
