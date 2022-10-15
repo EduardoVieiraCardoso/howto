@@ -3,11 +3,22 @@
  * and scoped locally.
  */
 
+
+.tamanho{
+  font-size: 100px;
+}
+
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: url('/img/fundo.jpg');
+  width:  100%; /*or 70%, or what you want*/
+  height: 100%; /*or 70%, or what you want*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 996px) {
@@ -20,4 +31,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.hero{
+  width: 400px;
+  height: 400px;
+}
+
+.teste{
+  max-width: 50%;
+  max-height: 50%;
+  align-items: center;
 }
