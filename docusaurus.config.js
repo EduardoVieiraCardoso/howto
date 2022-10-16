@@ -71,12 +71,6 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'Segurança/index',
-            position: 'left',
-            label: 'Segurança',
-          },
-          {
-            type: 'doc',
             docId: 'Armazenamento/index',
             position: 'left',
             label: 'Armazenamento',
@@ -93,7 +87,7 @@ const config = {
             position: 'left',
             label: 'eve-ng',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'right'},
           {
             type: 'doc',
             docId: 'quemsou',
