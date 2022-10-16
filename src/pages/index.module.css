@@ -38,8 +38,8 @@
   height: 400px;
 }
 
-.teste{
-  max-width: 100%;
-  max-height: 100%;
+.logo_educardoso{
+  width: 50%;
+  height: auto;
   align-items: center;
 }

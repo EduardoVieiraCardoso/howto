@@ -39,11 +39,15 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={` Base de Conhecimentos`} // Original - title={` Base de Conhecimentos ${siteConfig.title}`}
+      title={`Base de Conhecimentos`} // Original - title={` Base de Conhecimentos ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <div className={clsx('hero hero--primary', styles.heroBanner)}>
-            <img className={styles.teste} src='/img/logo_branco.svg'></img>
+      <div className={styles.heroBanner}>
+        <img  className={styles.logo_educardoso} src='/img/logo_branco.svg'></img>
       </div>
+      <main>
+      <HomepageFeatures />
+      </main>
     </Layout>
   );
 }
+
