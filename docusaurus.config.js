@@ -42,12 +42,13 @@ const config = {
             filename: 'sitemap.xml',
           },
           // Will be passed to @docusaurus/plugin-google-gtag (only enabled when explicitly specified)
-          gtag: {},
-          // Will be passed to @docusaurus/plugin-google-analytics (only enabled when explicitly specified)
-          googleAnalytics: {
-          trackingID: 'G-TRV9LW1LHZ',
-          anonymizeIP: true,
+          gtag: {
+            trackingID: 'G-TRV9LW1LHZ',
+            anonymizeIP: false,
           },
+          
+          // Will be passed to @docusaurus/plugin-google-analytics (only enabled when explicitly specified)
+          googleAnalytics: {},
         },
       ],
     ],
