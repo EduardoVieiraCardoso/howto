@@ -27,8 +27,12 @@ const config = {
           trackingID: 'G-TRV9LW1LHZ',
           anonymizeIP: true,
         },
+        googleAnalytics: {
+          trackingID: 'G-TRV9LW1LHZ',
+          anonymizeIP: true,
+        },
         sitemap: {
-          changefreq: 'weekly',
+          changefreq: 'always',
           priority: 0.5,
           ignorePatterns: ['/tags/**'],
           filename: 'sitemap.xml',
