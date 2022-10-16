@@ -14,33 +14,43 @@ const config = {
 
   organizationName: 'Edu Cardoso', // Usually your GitHub org/user name.
   projectName: 'Base de Conhecimento', // Usually your repo name.
-
   i18n: {
     defaultLocale: 'pt-BR',
     locales: ['pt-BR'],
   },
-
-  presets: [
-    [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+    presets: [
+      [
+        '@docusaurus/preset-classic',
+        {
+          // Debug defaults to true in dev, false in prod
+          debug: undefined,
+          // Will be passed to @docusaurus/theme-classic.
+          theme: {
+            customCss: [require.resolve('./src/css/custom.css')],
+          },
+          // Will be passed to @docusaurus/plugin-content-docs (false to disable)
+          docs: {},
+          // Will be passed to @docusaurus/plugin-content-blog (false to disable)
+          blog: {},
+          // Will be passed to @docusaurus/plugin-content-pages (false to disable)
+          pages: {},
+          // Will be passed to @docusaurus/plugin-content-sitemap (false to disable)
+          sitemap: {
+            changefreq: 'weekly',
+            priority: 0.5,
+            ignorePatterns: ['/tags/**'],
+            filename: 'sitemap.xml',
+          },
+          // Will be passed to @docusaurus/plugin-google-gtag (only enabled when explicitly specified)
+          gtag: {},
+          // Will be passed to @docusaurus/plugin-google-analytics (only enabled when explicitly specified)
+          googleAnalytics: {
+          trackingID: 'G-TRV9LW1LHZ',
+          anonymizeIP: true,
+          },
         },
-        blog: {
-          showReadingTime: true,
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      }),
+      ],
     ],
-  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
