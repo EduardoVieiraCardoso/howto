@@ -3,7 +3,6 @@ slug: Redes-Network-eveng
 title: Emulador de redes - EVE-NG 
 authors: Eduardo
 tags: [Mikrotik, Cisco, Redes, Protocolos]
-displayed_sidebar: Redes
 sidebar_position: 1
 ---
 

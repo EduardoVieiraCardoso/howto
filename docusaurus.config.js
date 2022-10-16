@@ -18,40 +18,39 @@ const config = {
     defaultLocale: 'pt-BR',
     locales: ['pt-BR'],
   },
-    presets: [
-      [
-        '@docusaurus/preset-classic',
-        {
-          // Debug defaults to true in dev, false in prod
-          debug: undefined,
-          // Will be passed to @docusaurus/theme-classic.
-          theme: {
-            customCss: [require.resolve('./src/css/custom.css')],
-          },
-          // Will be passed to @docusaurus/plugin-content-docs (false to disable)
-          docs: {},
-          // Will be passed to @docusaurus/plugin-content-blog (false to disable)
-          blog: {},
-          // Will be passed to @docusaurus/plugin-content-pages (false to disable)
-          pages: {},
-          // Will be passed to @docusaurus/plugin-content-sitemap (false to disable)
-          sitemap: {
-            changefreq: 'weekly',
-            priority: 0.5,
-            ignorePatterns: ['/tags/**'],
-            filename: 'sitemap.xml',
-          },
-          // Will be passed to @docusaurus/plugin-google-gtag (only enabled when explicitly specified)
-          gtag: {
-            trackingID: 'G-TRV9LW1LHZ',
-            anonymizeIP: false,
-          },
-          
-          // Will be passed to @docusaurus/plugin-google-analytics (only enabled when explicitly specified)
-          googleAnalytics: {},
+ 
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        gtag: {
+          trackingID: 'G-TRV9LW1LHZ',
+          anonymizeIP: true,
         },
-      ],
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          // Please change this to your repo.
+          editUrl:
+            'https://github.com/facebook/docusaurus/edit/master/website/',
+        },
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo.
+          editUrl:
+            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      },
     ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
