@@ -59,6 +59,27 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'QSHLC9RVX9',
+  
+        // Public API key: it is safe to commit it
+        apiKey: '847606e7255ffd34cfc698bab94c938c',
+  
+        indexName: 'infra_educardoso.com.br',
+  
+        // Optional: see doc section below
+        contextualSearch: true,
+  
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'howto\\.educardoso\\.com\\.br|educardoso\\.com\\.br',
+  
+        // Optional: Algolia search parameters
+        searchParameters: {},
+  
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+      },
       colorMode: {
         defaultMode: 'light',
         disableSwitch: true,
