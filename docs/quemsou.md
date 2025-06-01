@@ -25,8 +25,8 @@ Ao longo da minha trajetória, trabalhei com os mais variados sistemas operacion
 
 ### **Contato**
 
-<div align="left">
-  <img src='/img/edu.png' width="120" height="120" style="border-radius: 50%; margin-bottom: 10px;">
-</div>
+#<div align="left">
+#  <img src='/img/edu.png' width="120" height="120" style="border-radius: 50%; margin-bottom: 10px;">
+#</div>
 
 - [LinkedIn](https://www.linkedin.com/in/eduardovieirac)
