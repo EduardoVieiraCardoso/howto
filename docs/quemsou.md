@@ -1,29 +1,32 @@
-# Olá
-
-Meu nome é Eduardo e sou um **Resolvedor de Problemas!**
-
-## Meu Propósito
-descrever proposito e objeto
-
-## O que faço?
-Atualmente trabalho na Scroll Tecnologia (Que recentemente foi absorvida pela **PSA Soluções em TI**), empresa com foco em soluções de infraestrutura, principalmente soluções de armazenamento, trabalhando com storages IBM. 
-
-Na Scroll, trabalho como Analista de Infraestrutura, planejando, implementando e prestando suporte para os mais váriados tipos de sistemas operacionais e cenários.
-
-## Realizações
-
-### Cursos e especializações
-- Técnico em redes de Computadores
-
-### Conquistas
-- Certificação **LPI 101 e 102**
-- Certificação **LPI 201 e 202**
-- Certificação **VMCE ( Veeam Certified Engineer)**
+# Olá, meu nome é Eduardo.  
 
 ---
 
-Segue informações de contato:
+### **Propósito**
+Minha missão é descomplicar a tecnologia, trazendo soluções práticas e eficientes para ambientes complexos de infraestrutura de TI.
 
-<img src='/img/edu.png'  width="150" height="150"></img>  
+---
 
-- [Linkedin](https://www.linkedin.com/in/eduardovieirac)
+### **O que faço?**
+Sou Analista de Infraestrutura na **PSA Soluções em TI**, atuando no planejamento, implantação e suporte a projetos de infraestrutura, com forte foco em soluções de armazenamento, especialmente IBM Storage.
+
+Ao longo da minha trajetória, trabalhei com os mais variados sistemas operacionais e enfrentei cenários desafiadores, sempre com o objetivo de entregar um ambiente estável, seguro e preparado para o crescimento do negócio.
+
+---
+
+### **Principais Conquistas e Certificações**
+
+- **LPI 101 e 102**  
+- **LPI 201 e 202**  
+- **VMCE (Veeam Certified Engineer)**  
+- Técnico em Redes de Computadores
+
+---
+
+### **Contato**
+
+<div align="left">
+  <img src='/img/edu.png' width="120" height="120" style="border-radius: 50%; margin-bottom: 10px;">
+</div>
+
+- [LinkedIn](https://www.linkedin.com/in/eduardovieirac)
