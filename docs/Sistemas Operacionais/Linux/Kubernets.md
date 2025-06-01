@@ -2,15 +2,16 @@
 slug: linux-kubernets
 title: Kubernets
 authors: Eduardo
-tags: [Linux, Kubernets, power]
+tags: [Linux, Kubernets,]
 displayed_sidebar: sistema_operacional
 ---
-# 4. O K8S
+# 1. O K8S
 
-A instalação do Kubernetes é simples e pode ser resolvido com um script e até mesmo ser feita com Ansible, ao menos o setup inicial. Neste caso, fiz manualmente o processo de instalação.
-## 4.1. Requisitos base
+A instalação do Kubernetes é simples e pode ser resolvido com um script e até mesmo ser feita com Ansible, ao menos o setup inicial. Neste caso, fiz manualmente o processo de instalação, para mostrar alguns passos e explicar alguns conceitos.
 
-### 4.1.1. O mínimo
+## 1.1. Requisitos base
+
+### 1.1.1. O mínimo
 
 Quando comento com o mínimo, me refiro ao básico que precisa ser feito para que comecemos a instalação e configuração do k8s, seguindo um processo lógico/pratico.
 
@@ -21,15 +22,17 @@ Quando comento com o mínimo, me refiro ao básico que precisa ser feito para qu
 - Sudoers  
 - Grupos  
 - Usuários  
-- Permissões  
-## 4.2. Preparando o Linux
+- Permissões
+
+## 1.2. Preparando o Linux
 
 Dividi em três seções:
 
-- 4.2.1. Passos para todos os nós  
-- 4.2.2. Passos para os masters  
-- 4.2.3. Passos para os workers  
-### 4.2.1. Passos para todos os nós
+- 1.2.1. Passos para todos os nós  
+- 1.2.2. Passos para os masters  
+- 1.2.3. Passos para os workers
+  
+### 1.2.1. Passos para todos os nós
 
 Essa é a parte que todo mundo quer pular, mas que, se for mal feita, vira dor de cabeça depois. Aqui vamos garantir o básico, o mínimo pra não ferrar tudo quando o kubeadm começar a trabalhar.
 
@@ -69,7 +72,7 @@ sudo sed -i '/swap/d' /etc/fstab
 
 Se tiver um arquivo `/swap.img` no sistema, apague também, pois isso é um arquivo e ocupa, às vezes, bastante espaço.
 
-#### 4.2.1.1. Ativando overlay e br_netfilter
+#### 1.2.1.1. Ativando overlay e br_netfilter
 
 Explicando rapidamente:
 
@@ -96,7 +99,7 @@ lsmod | grep overlay
 lsmod | grep br_netfilter
 ```
 
-#### 4.2.1.2. Parâmetros de rede
+#### 1.2.1.2. Parâmetros de rede
 
 Por padrão, o Linux ignora o tráfego que passa por bridges. Só que o CNI (plugin de rede) do Kubernetes precisa ver esse tráfego pra funcionar. Se isso não estiver configurado, você vai perder tempo tentando descobrir por que os pods não se comunicam.
 
@@ -114,7 +117,7 @@ EOF
 sudo sysctl --system
 ```
 
-#### 4.2.1.3. Configuração dos repositórios necessários
+#### 1.2.1.3. Configuração dos repositórios necessários
 
 Para o lab, foi necessário instalar as seguintes ferramentas:
 
@@ -153,14 +156,14 @@ echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 sudo apt update
 ```
 
-#### 4.2.1.4. Instalar containerd
+#### 1.2.1.4. Instalar containerd
 
 ```bash
 sudo apt install -y containerd.io
 ```
 
 > **containerd.io**: Runtime utilizado pelo Kubernetes para gerenciar e executar containers.
-#### 4.2.1.5. Configurar o containerd
+#### 1.2.1.5. Configurar o containerd
 O `containerd` é o runtime de containers utilizado pelo Kubernetes para gerenciar a execução de containers em cada nó. Para garantir compatibilidade com o `kubelet`, é necessário configurar o uso de cgroups com `systemd`.
 
 **Passos:**
@@ -182,7 +185,7 @@ Na sequência, o serviço do containerd pode ser iniciado e habilitado com:
 sudo systemctl restart containerd
 sudo systemctl enable containerd
 ```
-#### 4.2.1.6. Resumo dos comandos
+#### 1.2.1.6. Resumo dos comandos
 
 <details>
 <summary><strong>Todos os comandos desta etapa</strong></summary>
@@ -236,7 +239,7 @@ sudo sysctl --system
 ```
 </details>
 
-### 4.2.2. Passos para os masters
+### 1.2.2. Passos para os masters
 
 Este lab foi montado com a versão 1.31.8.
 
@@ -263,7 +266,7 @@ systemctl enable kubelet
 ```
 
 - **kubelet**: Agente que roda em todos os nós, responsável por garantir que os containers estejam em execução conforme definido
-#### 4.2.2.1 - Inicializando o cluster
+#### 1.2.2.1 - Inicializando o cluster
 
 Aqui é onde vem uma "pegada" minha para organização, o k8s no geral pede para baixar os arquivos e ir fazendo o `kubectl apply -f qualquercoisa.yml` mas com isso o ambiente fica muito desorganizado, aqui vai uma proposta para melhorar isso.
 ```
@@ -345,14 +348,14 @@ verificando cluster
 kubectl get nodes
 ```
 
-#### 4.2.2.2 - Configurando o cluster
+#### 1.2.2.2 - Configurando o cluster
 
 Caso nao tenha subido de primeira e tudo ficado como ready, valide com:
 ```
 kubectl get nodes
 
 ```
-### 4.2.3. Passos para os workers
+### 1.2.3. Passos para os workers
 
 Os workers são os que menos dão trabalho, pois basicamente precisamos instalar o containerd, kubelet e kubeadm e depois incluir no cluster.
 
